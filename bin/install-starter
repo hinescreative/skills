@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source_root=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P)
+target_home=${1:-$HOME}
+skills=(ponytail frontend-design fixing-accessibility fixing-motion-performance better-icons)
+
+# Check all destinations before changing any. Existing installations are decisions,
+# not things this installer may overwrite.
+for skill in "${skills[@]}"; do
+  test -f "$source_root/skills/$skill/SKILL.md"
+  for consumer in .agents .claude; do
+    target="$target_home/$consumer/skills/$skill"
+    if [[ -e "$target" || -L "$target" ]]; then
+      if [[ ! -L "$target" ]] || [[ "$(readlink -f -- "$target")" != "$source_root/skills/$skill" ]]; then
+        printf 'Existing skill left untouched: %s\n' "$target" >&2
+        exit 1
+      fi
+    fi
+  done
+done
+
+for skill in "${skills[@]}"; do
+  for consumer in .agents .claude; do
+    mkdir -p -- "$target_home/$consumer/skills"
+    target="$target_home/$consumer/skills/$skill"
+    [[ -L "$target" ]] || ln -s -- "$source_root/skills/$skill" "$target"
+  done
+done
+printf 'Linked %s skills from %s\n' "${#skills[@]}" "$source_root"
