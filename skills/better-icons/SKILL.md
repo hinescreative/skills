@@ -34,7 +34,7 @@ better-icons get <icon-id> [--color <color>] [--size <px>] [--json]
 
 ```bash
 better-icons search arrow --limit 10
-better-icons search home --json | jq '.icons[0]'
+better-icons search home --json
 better-icons get lucide:home > icon.svg
 better-icons get mdi:home --color '#333' --json
 
