@@ -9,6 +9,8 @@ Leave the existing workspace usable by the next session without making the user 
 
 ## Choose the target and role
 
+Distinguish the current request from the request preserved in the workspace. A save records state; a resume reads and reconciles it, then advances the actual unresolved task. A workspace link is not by itself another save request. On resume, use the current user instruction and the existing handoff workflow; do not end at this skill's no-change receipt. Newer instructions may supersede an old save-only scope without removing unrelated holds or ownership boundaries.
+
 Use the workspace explicitly named in the request or established for this conversation. Read its current page and full record before preparing changes. A folder's startup pointer can help locate it, but does not make this conversation the owner of a different seat's page. If the target cannot be established, ask for that one missing pointer; do not create a standalone report or another state file.
 
 - **Owning session:** prepare and apply the update itself, unless a child was requested.
@@ -31,7 +33,9 @@ Keep only changes that affect recovery:
 
 Use current artifacts to check claims. Keep the page, record and pickup text consistent; do not leave a superseded next step elsewhere on the page. Link detailed sources rather than copying transcripts, task lists or sensitive material. Preserve existing presentation conventions and edit its maintained source if the page is generated.
 
-Group tightly coupled results. Save a recovery-relevant result before another independent work unit or a planned transition. Do not promote every conversational refinement to durable policy. If no recovery-relevant state changed, return **No checkpoint change needed** and stop: no timestamp-only edits, files or commits.
+Write pickup text for the phase the returning reader will enter. Once the save is complete, describe it as completed work and name the unresolved goal, governing conditions and a concrete permitted next action. Update the lede, next section, record's current state and copyable instructions together. Do not copy the save request forward as the reader's assignment. Read the pickup as a new request: it should lead to that next action (or a specific missing-evidence question), not another save or a readiness-only reply. Keep unfinished publication explicit until checked; a prepared pickup is not proof that the save or resumption succeeded.
+
+Group tightly coupled results. Save a recovery-relevant result before another independent work unit or a planned transition. Do not promote every conversational refinement to durable policy. For a save-only request, if no recovery-relevant state changed, return **No checkpoint change needed** and stop: no timestamp-only edits, files or commits. This ends only the save, not a separately requested continuation.
 
 ## Draft, then apply in the owning session
 
