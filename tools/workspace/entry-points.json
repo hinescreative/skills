@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "name": "Session start",
+      "kind": "session-start",
+      "where": "any agent session opened in this folder",
+      "reads": [
+        "README.md"
+      ],
+      "checks": [],
+      "state": "left",
+      "reason": "Map only: these files stayed where they are."
+    },
+    {
+      "name": "Claude Code plugin marketplace",
+      "kind": "package",
+      "where": "/plugin marketplace add, or /plugin install from this repo",
+      "reads": [
+        ".claude-plugin",
+        "skills"
+      ],
+      "checks": [],
+      "state": "left",
+      "reason": "Map only: nothing in this folder has moved, so this reader was left as written."
+    },
+    {
+      "name": "Starter skill installer",
+      "kind": "script",
+      "where": "bash bin/install-starter on a machine",
+      "reads": [
+        "bin",
+        "skills"
+      ],
+      "checks": [],
+      "state": "left",
+      "reason": "Map only: nothing in this folder has moved, so this reader was left as written."
+    }
+  ]
+}

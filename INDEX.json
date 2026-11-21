@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "default_owner": {
+    "seat": "foreman"
+  },
+  "entries": [
+    {
+      "path": "README.md",
+      "kind": "startup",
+      "purpose": "The repository description (what skills are, how to add the marketplace in Claude Code) with a section on the practical starter library, and the starter table and install notes.",
+      "sensitivity": "standard",
+      "group": [
+        "README.md",
+        "STARTER.md",
+        ".gitignore",
+        ".gitattributes"
+      ]
+    },
+    {
+      "path": ".claude-plugin",
+      "kind": "config",
+      "purpose": "The plugin marketplace manifest listing the document-skills and example-skills sets by skill path.",
+      "sensitivity": "standard"
+    },
+    {
+      "path": "bin",
+      "kind": "tools",
+      "purpose": "The install-starter script: links five starter skills into the agent and Claude skill folders, refusing to overwrite anything already there.",
+      "sensitivity": "standard"
+    },
+    {
+      "path": "INDEX.json",
+      "kind": "startup",
+      "purpose": "This map: what each top-level path in the folder is for and who owns it.",
+      "sensitivity": "standard"
+    },
+    {
+      "path": "skills",
+      "kind": "source",
+      "purpose": "The skills themselves, one folder each with a SKILL.md: document skills, design and creative ones, developer tools, plus Hines additions such as checkpoint, ponytail and academy-guide.",
+      "sensitivity": "standard"
+    },
+    {
+      "path": "spec",
+      "kind": "docs",
+      "purpose": "A pointer to the Agent Skills specification at its public home.",
+      "sensitivity": "standard"
+    },
+    {
+      "path": "template",
+      "kind": "docs",
+      "purpose": "A blank skill template with the required front matter.",
+      "sensitivity": "standard"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "kind": "docs",
+      "purpose": "Attribution notices for third-party software included in the skills.",
+      "sensitivity": "standard"
+    },
+    {
+      "path": "tools",
+      "kind": "tools",
+      "purpose": "Holds tools/workspace, the data files the central house checkers read for this folder.",
+      "sensitivity": "standard"
+    },
+    {
+      "path": "tools/workspace",
+      "kind": "tools",
+      "purpose": "Data files the central house checkers read for this folder: the contract, the list of top-level items, the ignore probes and the outside readers. The checker programs themselves live in hinescreative/house-migration.",
+      "sensitivity": "standard"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "moves": [],
+  "unchanged": [
+    {
+      "path": ".claude-plugin",
+      "phase": 0
+    },
+    {
+      "path": ".gitattributes",
+      "phase": 0
+    },
+    {
+      "path": ".gitignore",
+      "phase": 0
+    },
+    {
+      "path": "bin",
+      "phase": 0
+    },
+    {
+      "path": "INDEX.json",
+      "phase": 0
+    },
+    {
+      "path": "README.md",
+      "phase": 0
+    },
+    {
+      "path": "skills",
+      "phase": 0
+    },
+    {
+      "path": "spec",
+      "phase": 0
+    },
+    {
+      "path": "STARTER.md",
+      "phase": 0
+    },
+    {
+      "path": "template",
+      "phase": 0
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "phase": 0
+    },
+    {
+      "path": "tools",
+      "phase": 0
+    }
+  ]
+}
