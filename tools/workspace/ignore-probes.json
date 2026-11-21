@@ -1,0 +1,10 @@
+{
+  "source": [
+    ".DS_Store",
+    "__pycache__/probe.pyc"
+  ],
+  "destination": [
+    ".DS_Store",
+    "__pycache__/probe.pyc"
+  ]
+}
